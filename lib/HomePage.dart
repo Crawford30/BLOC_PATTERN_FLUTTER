@@ -24,11 +24,9 @@ class _HomePageState extends State<HomePage>  {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(100),
-        child: Text("Bloc App"),
-    ),
-
+       appBar: AppBar(
+         title: Text("Bloc Pattern"),
+       ),
         body: Container(
           child: StreamBuilder<List<Employee>>(
             stream: _employeeBloc.employeeListStream,
